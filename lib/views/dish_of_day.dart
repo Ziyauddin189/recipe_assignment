@@ -37,7 +37,7 @@ class DealOfDay extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 90,
+                    height: 150,
                   ),
                   Text(
                     'Dish of the day',

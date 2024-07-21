@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nosh_assignment/view_models/recipe_view_model.dart';
+import 'package:nosh_assignment/views/rounded_grey_container.dart';
 import 'package:stacked/stacked.dart';
 
 class DiscoverContainer extends StatelessWidget {
@@ -19,40 +20,34 @@ class DiscoverContainer extends StatelessWidget {
             : Column(
           crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Discover regional delights',
-                  style: TextStyle(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 16),
+                  child: Text('Discover regional delights',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
 
-                SizedBox(
-                  height: 500,
-                  child: ListView.builder(
-          scrollDirection: Axis.horizontal, // Set horizontal scroll direction
+                Padding(
+                  padding: const EdgeInsets.only(left: 16),
+                  child: SizedBox(
+                    height: 300,
+                    child: ListView.builder(
+          scrollDirection: Axis.horizontal,
           itemCount: viewModel.recipes.length,
           itemBuilder: (context, index) {
-                  final recipe = viewModel.recipes[index];
-                  return Container(
-                    width: 200, // Set a width for each item to properly display in horizontal scroll
-                    margin: EdgeInsets.all(8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Image.network(recipe.imageUrl),
-                        SizedBox(height: 8.0),
-                        Text(
-                          recipe.dishName,
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
+                    final recipe = viewModel.recipes[index];
+                    return RoundedGreyContainer(
+                      imageUrl: recipe.imageUrl,
+                      title: recipe.dishName,
+                      buttonText: 'Open',
+                      onButtonPressed: () {},
+                    );
           },
         ),
+                  ),
                 ),
               ],
             );
