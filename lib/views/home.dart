@@ -1,8 +1,10 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:nosh_assignment/view_models/recipe_view_model.dart';
+import 'package:nosh_assignment/views/breakfast_container.dart';
 import 'package:nosh_assignment/views/discover_container.dart';
 import 'package:nosh_assignment/views/dish_of_day.dart';
+import 'package:nosh_assignment/views/item_container.dart';
 import 'package:stacked/stacked.dart';
 
 const List<TabItem> items = [
@@ -62,6 +64,8 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 DealOfDay(),
                 DiscoverContainer(),
+                BreakfastContainer(),
+                ItemContainer()
               ],
             ),
           ),

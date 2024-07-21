@@ -42,7 +42,8 @@ class DealOfDay extends StatelessWidget {
                   Text(
                     'Dish of the day',
                     style: TextStyle(
-                      fontSize: 20.0,
+                      fontSize: 25.0,
+                      color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -50,6 +51,7 @@ class DealOfDay extends StatelessWidget {
                     'Egg curry',
                     style: TextStyle(
                       fontSize: 12.0,
+                      color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
