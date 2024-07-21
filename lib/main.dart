@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'views/recipe_screen.dart';
+import 'package:nosh_assignment/views/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,10 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Recipe App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RecipeScreen(),
+      home: HomeScreen(),
     );
   }
 }
