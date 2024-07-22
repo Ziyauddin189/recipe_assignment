@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nosh_assignment/views/home.dart';
+import 'package:nosh_assignment/views/home/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,3 +18,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+

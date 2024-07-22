@@ -11,11 +11,15 @@ class DealOfDay extends StatelessWidget {
       onModelReady: (viewModel) => viewModel.fetchRecipes(),
       viewModelBuilder: () => RecipeViewModel(),
       builder: (context, viewModel, child) {
+        bool hasRecipes = viewModel.recipes.isNotEmpty;
         return Stack(
           children: [
-            Image.network(viewModel.recipes[3].imageUrl),
+            hasRecipes
+                ? Image.network(viewModel.recipes[3].imageUrl)
+                : Center(child: CircularProgressIndicator()),
             Center(
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
                     margin: EdgeInsets.only(top: 20),
@@ -48,7 +52,7 @@ class DealOfDay extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Egg curry',
+                    hasRecipes ? 'Chicken Biryani' : '',
                     style: TextStyle(
                       fontSize: 12.0,
                       color: Colors.white,

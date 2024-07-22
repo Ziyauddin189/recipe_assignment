@@ -50,7 +50,7 @@ class RoundedGreyContainer extends StatelessWidget {
                     Positioned(
                       right: 10,
                       bottom: 10,
-                      child: Icon(Icons.heart_broken)
+                      child: Icon(Icons.favorite_border)
                     ),
                   ],
                 ),

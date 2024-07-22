@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nosh_assignment/view_models/recipe_view_model.dart';
-import 'package:nosh_assignment/views/rounded_grey_container.dart';
+import 'package:nosh_assignment/widgets/rounded_grey_container.dart';
 import 'package:stacked/stacked.dart';
 
 class BreakfastContainer extends StatelessWidget {
@@ -23,7 +23,7 @@ class BreakfastContainer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 16),
+                padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 16),
                 child: Text('Breakfasts for Champions',
                   style: TextStyle(
                     color: Colors.white,
@@ -35,10 +35,12 @@ class BreakfastContainer extends StatelessWidget {
 
               Padding(
                 padding: const EdgeInsets.only(left: 16),
-                child: SizedBox(
+                child: Container(
                   height: 300,
+                  margin: const EdgeInsets.only(bottom: 15),
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
+                    reverse: true,
                     itemCount: viewModel.recipes.length,
                     itemBuilder: (context, index) {
                       final recipe = viewModel.recipes[index];

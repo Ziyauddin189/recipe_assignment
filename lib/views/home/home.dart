@@ -1,10 +1,11 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:nosh_assignment/view_models/recipe_view_model.dart';
-import 'package:nosh_assignment/views/breakfast_container.dart';
-import 'package:nosh_assignment/views/discover_container.dart';
-import 'package:nosh_assignment/views/dish_of_day.dart';
-import 'package:nosh_assignment/views/item_container.dart';
+import 'package:nosh_assignment/views/home/components/breakfast_container.dart';
+import 'package:nosh_assignment/views/home/components/discover_container.dart';
+import 'package:nosh_assignment/views/home/components/dish_of_day.dart';
+import 'package:nosh_assignment/views/home/components/item_container.dart';
+import 'package:nosh_assignment/widgets/rounded_grey_container.dart';
 import 'package:stacked/stacked.dart';
 
 const List<TabItem> items = [
@@ -56,16 +57,23 @@ class _HomeScreenState extends State<HomeScreen> {
             )),
             backgroundColor: Colors.white70,
             actions: [
-              Icon(Icons.heart_broken_sharp)
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: Icon(Icons.favorite_border,
+                  color: Colors.black,
+                ),
+              )
             ],
           ),
           body: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
             child: Column(
               children: [
                 DealOfDay(),
                 DiscoverContainer(),
                 BreakfastContainer(),
                 ItemContainer()
+
               ],
             ),
           ),
