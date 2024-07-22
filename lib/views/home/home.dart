@@ -10,15 +10,15 @@ import 'package:stacked/stacked.dart';
 
 const List<TabItem> items = [
   TabItem(
-    icon: Icons.home,
+    icon: Icons.dinner_dining,
     title: 'Recipes',
   ),
   TabItem(
-    icon: Icons.calendar_month,
+    icon: Icons.list_outlined,
     title: 'List',
   ),
   TabItem(
-    icon: Icons.library_books,
+    icon: Icons.local_fire_department,
     title: 'Nosh',
   ),
   TabItem(
@@ -26,7 +26,7 @@ const List<TabItem> items = [
     title: 'Meal Plan',
   ),
   TabItem(
-    icon: Icons.account_box,
+    icon: Icons.person,
     title: 'Profile',
   ),
 ];
