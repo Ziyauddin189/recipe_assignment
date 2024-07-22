@@ -48,6 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
       builder: (context, viewModel, child) {
         return Scaffold(
           appBar: AppBar(
+            leading: const SizedBox(),
             title: Center(child: Text('Recipes',
               style: TextStyle(
                 fontSize: 16.0,

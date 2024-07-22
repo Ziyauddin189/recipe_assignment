@@ -62,6 +62,7 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: const SizedBox(),
         title: Center(child: Text('Recipes',
           style: TextStyle(
             fontSize: 16.0,
