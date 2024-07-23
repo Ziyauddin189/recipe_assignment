@@ -27,6 +27,7 @@ class ItemContainer extends StatelessWidget {
                             physics: const NeverScrollableScrollPhysics(),
                             children: [
                               RoundedGreyContainer(
+                                index: 6,
                                 imageUrl: viewModel.recipes[2].imageUrl,
                                 title: viewModel.recipes[2].dishName,
                                 buttonText: 'Open',
@@ -44,6 +45,7 @@ class ItemContainer extends StatelessWidget {
                             physics: const NeverScrollableScrollPhysics(),
                             children: [
                               RoundedGreyContainer(
+                                index: 7,
                                 imageUrl: viewModel.recipes[3].imageUrl,
                                 title: viewModel.recipes[3].dishName,
                                 buttonText: 'Open',

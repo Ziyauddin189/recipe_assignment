@@ -40,6 +40,7 @@ class DiscoverContainer extends StatelessWidget {
                             itemBuilder: (context, index) {
                               final recipe = viewModel.recipes[index];
                               return RoundedGreyContainer(
+                                index: index,
                                 imageUrl: recipe.imageUrl,
                                 title: recipe.dishName,
                                 buttonText: 'Open',

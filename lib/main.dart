@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:nosh_assignment/generated/l10n.dart';
 import 'package:nosh_assignment/views/home/internet_connectivity/dependency.dart';
 import 'package:nosh_assignment/views/splash_screen.dart';
 
-void main() {
+Future<void> main() async{
+  await Hive.initFlutter();
+  Hive.openBox('favorites');
   runApp(MyApp());
   DependencyInjection.init();
 }
+
+
 
 class MyApp extends StatelessWidget {
   @override
