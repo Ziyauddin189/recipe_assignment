@@ -1,0 +1,18 @@
+{
+  "nosh":"Nosh",
+  "recipes":"Recipes",
+  "list":"List",
+  "meal_plan":"Meal Plan",
+  "profile":"Profile",
+  "search": "Search",
+  "dish_of_the_day": "Dish of the day",
+  "breakfasts_for_champions": "Breakfasts for Champions",
+  "discover_regional_delights": "Discover regional delights",
+  "oops_no_internet": "\"Oops! No internet connection.\",",
+  "please_check_your_internet": "\"Please check your internet connection.\",",
+  "pull_down_to_refresh": "\"Pull down to refresh.\",",
+  "minutes": "20 minutes",
+  "vegetarian": "Vegetarian"
+
+
+}

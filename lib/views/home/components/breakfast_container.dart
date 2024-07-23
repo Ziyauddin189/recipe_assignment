@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nosh_assignment/generated/l10n.dart';
 import 'package:nosh_assignment/view_models/recipe_view_model.dart';
 import 'package:nosh_assignment/widgets/rounded_grey_container.dart';
 import 'package:stacked/stacked.dart';
@@ -21,12 +22,11 @@ class BreakfastContainer extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 20, horizontal: 16),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
                           child: Text(
-                            'Breakfasts for Champions',
-                            style: TextStyle(
+                            LanguageTranslation.current.breakfasts_for_champions,
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 20.0,
                               fontWeight: FontWeight.bold,

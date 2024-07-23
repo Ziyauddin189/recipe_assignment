@@ -1,5 +1,6 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:nosh_assignment/generated/l10n.dart';
 import 'package:nosh_assignment/view_models/recipe_view_model.dart';
 import 'package:nosh_assignment/views/home/components/breakfast_container.dart';
 import 'package:nosh_assignment/views/home/components/discover_container.dart';
@@ -8,26 +9,26 @@ import 'package:nosh_assignment/views/home/components/item_container.dart';
 import 'package:nosh_assignment/widgets/rounded_grey_container.dart';
 import 'package:stacked/stacked.dart';
 
-const List<TabItem> items = [
+List<TabItem> items = [
   TabItem(
     icon: Icons.dinner_dining,
-    title: 'Recipes',
+    title: LanguageTranslation.current.recipes,
   ),
   TabItem(
     icon: Icons.list_outlined,
-    title: 'List',
+    title: LanguageTranslation.current.list,
   ),
   TabItem(
     icon: Icons.local_fire_department,
-    title: 'Nosh',
+    title: LanguageTranslation.current.nosh,
   ),
   TabItem(
     icon: Icons.event,
-    title: 'Meal Plan',
+    title: LanguageTranslation.current.meal_plan,
   ),
   TabItem(
     icon: Icons.person,
-    title: 'Profile',
+    title: LanguageTranslation.current.profile,
   ),
 ];
 

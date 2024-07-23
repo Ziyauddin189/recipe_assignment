@@ -1,29 +1,29 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:nosh_assignment/generated/l10n.dart';
 import 'package:nosh_assignment/views/home/home.dart';
 
-const List<TabItem> items = [
+List<TabItem> items = [
   TabItem(
     icon: Icons.dinner_dining,
-    title: 'Recipes',
+    title: LanguageTranslation.current.recipes,
   ),
   TabItem(
     icon: Icons.list_outlined,
-    title: 'List',
+    title: LanguageTranslation.current.list,
   ),
   TabItem(
     icon: Icons.local_fire_department,
-    title: 'Nosh',
+    title: LanguageTranslation.current.nosh,
   ),
   TabItem(
     icon: Icons.event,
-    title: 'Meal Plan',
+    title: LanguageTranslation.current.meal_plan,
   ),
   TabItem(
     icon: Icons.person,
-    title: 'Profile',
+    title: LanguageTranslation.current.profile,
   ),
 ];
 
@@ -65,8 +65,8 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
         leading: const SizedBox(),
         title: Center(
             child: Text(
-          'Recipes',
-          style: TextStyle(
+          LanguageTranslation.current.recipes,
+          style: const TextStyle(
             fontSize: 16.0,
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -90,26 +90,26 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
             physics: const AlwaysScrollableScrollPhysics(),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(
+              children: [
+                const Icon(
                   Icons.signal_wifi_off,
                   size: 100,
                   color: Colors.red,
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 Text(
-                  "Oops! No internet connection.",
-                  style: TextStyle(fontSize: 18),
+                  LanguageTranslation.current.oops_no_internet,
+                  style: const TextStyle(fontSize: 18),
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 Text(
-                  "Please check your internet connection.",
-                  style: TextStyle(fontSize: 18),
+                  LanguageTranslation.current.please_check_your_internet,
+                  style: const TextStyle(fontSize: 18),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
-                  "Pull down to refresh.",
-                  style: TextStyle(
+                  LanguageTranslation.current.pull_down_to_refresh,
+                  style: const TextStyle(
                     fontSize: 18,
                     color: Colors.grey,
                     fontStyle: FontStyle.italic,

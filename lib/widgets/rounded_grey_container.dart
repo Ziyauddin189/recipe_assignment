@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nosh_assignment/generated/l10n.dart';
 
 class RoundedGreyContainer extends StatelessWidget {
   final String imageUrl;
@@ -21,7 +22,6 @@ class RoundedGreyContainer extends StatelessWidget {
         width: 300,
         decoration: BoxDecoration(
           color: Colors.white,
-          //color: Colors.black87,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
@@ -74,7 +74,7 @@ class RoundedGreyContainer extends StatelessWidget {
                   const SizedBox(
                     width: 10,
                   ),
-                  const Text('20 minutes'),
+                  Text(LanguageTranslation.current.minutes),
                   const SizedBox(
                     width: 30,
                   ),
@@ -89,7 +89,7 @@ class RoundedGreyContainer extends StatelessWidget {
                   const SizedBox(
                     width: 10,
                   ),
-                  const Text('Vegetarian'),
+                  Text(LanguageTranslation.current.vegetarian),
                 ],
               ),
             ),

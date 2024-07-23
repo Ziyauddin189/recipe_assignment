@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nosh_assignment/generated/l10n.dart';
 import 'package:nosh_assignment/view_models/recipe_view_model.dart';
 import 'package:nosh_assignment/widgets/rounded_grey_container.dart';
 import 'package:stacked/stacked.dart';
@@ -19,12 +20,11 @@ class DiscoverContainer extends StatelessWidget {
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
                         child: Text(
-                          'Discover regional delights',
-                          style: TextStyle(
+                          LanguageTranslation.current.discover_regional_delights,
+                          style: const TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),

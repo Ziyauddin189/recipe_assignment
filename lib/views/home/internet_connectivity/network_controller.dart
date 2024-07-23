@@ -1,6 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:nosh_assignment/generated/l10n.dart';
 
 class NetworkController extends GetxController {
   final Connectivity _connectivity = Connectivity();
@@ -14,8 +15,8 @@ class NetworkController extends GetxController {
   void _updateConnectionStatus(ConnectivityResult connectivityResult) {
     if (connectivityResult == ConnectivityResult.none) {
       Get.snackbar(
-        "Oops! No internet connection.",
-        "Please check your internet connection.",
+        LanguageTranslation.current.oops_no_internet,
+        LanguageTranslation.current.please_check_your_internet,
         snackPosition: SnackPosition.BOTTOM,
         backgroundColor: Colors.black,
         colorText: Colors.white,

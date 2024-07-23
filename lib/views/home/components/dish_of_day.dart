@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nosh_assignment/generated/l10n.dart';
 import 'package:nosh_assignment/view_models/recipe_view_model.dart';
 import 'package:stacked/stacked.dart';
 
@@ -29,13 +30,13 @@ class DealOfDay extends StatelessWidget {
                       color: Colors.white70,
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: 'Search',
+                          hintText: LanguageTranslation.current.search,
                           border: InputBorder.none,
-                          prefixIcon: Icon(Icons.search),
+                          prefixIcon: const Icon(Icons.search),
                         ),
                       ),
                     ),
@@ -43,9 +44,9 @@ class DealOfDay extends StatelessWidget {
                   const SizedBox(
                     height: 150,
                   ),
-                  const Text(
-                    'Dish of the day',
-                    style: TextStyle(
+                  Text(
+                    LanguageTranslation.current.dish_of_the_day,
+                    style: const TextStyle(
                       fontSize: 25.0,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
