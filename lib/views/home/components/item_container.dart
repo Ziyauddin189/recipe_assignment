@@ -9,57 +9,53 @@ class ItemContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<RecipeViewModel>.reactive(
-
       onModelReady: (viewModel) => viewModel.fetchRecipes(),
       viewModelBuilder: () => RecipeViewModel(),
       builder: (context, viewModel, child) {
         return viewModel.isBusy
-            ? Center(child: CircularProgressIndicator())
+            ? const Center(child: CircularProgressIndicator())
             : viewModel.errorMessage.isNotEmpty
-            ? Center(child: Text(viewModel.errorMessage))
-            : Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 290,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 6),
-                child: ListView(
-                  physics: NeverScrollableScrollPhysics(),
-                  children: [
-                    RoundedGreyContainer(
-                      imageUrl: viewModel.recipes[2].imageUrl,
-                      title: viewModel.recipes[2].dishName,
-                      buttonText: 'Open',
-                      onButtonPressed: () {},
-                    ),
-
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 290,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 6),
-                child: ListView(
-                  physics: NeverScrollableScrollPhysics(),
-                  children: [
-                    RoundedGreyContainer(
-                      imageUrl: viewModel.recipes[3].imageUrl,
-                      title: viewModel.recipes[3].dishName,
-                      buttonText: 'Open',
-                      onButtonPressed: () {},
-                    ),
-
-                  ],
-                ),
-              ),
-            ),
-          ],
-        );
+                ? Center(child: Text(viewModel.errorMessage))
+                : Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 290,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 6),
+                          child: ListView(
+                            physics: const NeverScrollableScrollPhysics(),
+                            children: [
+                              RoundedGreyContainer(
+                                imageUrl: viewModel.recipes[2].imageUrl,
+                                title: viewModel.recipes[2].dishName,
+                                buttonText: 'Open',
+                                onButtonPressed: () {},
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 290,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 6),
+                          child: ListView(
+                            physics: const NeverScrollableScrollPhysics(),
+                            children: [
+                              RoundedGreyContainer(
+                                imageUrl: viewModel.recipes[3].imageUrl,
+                                title: viewModel.recipes[3].dishName,
+                                buttonText: 'Open',
+                                onButtonPressed: () {},
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
       },
     );
   }
 }
-

@@ -40,6 +40,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int visit = 0;
+
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<RecipeViewModel>.reactive(
@@ -49,7 +50,9 @@ class _HomeScreenState extends State<HomeScreen> {
         return Scaffold(
           appBar: AppBar(
             leading: const SizedBox(),
-            title: Center(child: Text('Recipes',
+            title: const Center(
+                child: Text(
+              'Recipes',
               style: TextStyle(
                 fontSize: 16.0,
                 color: Colors.black,
@@ -57,16 +60,17 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             )),
             backgroundColor: Colors.white70,
-            actions: [
+            actions: const [
               Padding(
-                padding: const EdgeInsets.only(right: 20),
-                child: Icon(Icons.favorite_border,
+                padding: EdgeInsets.only(right: 20),
+                child: Icon(
+                  Icons.favorite_border,
                   color: Colors.black,
                 ),
               )
             ],
           ),
-          body: SingleChildScrollView(
+          body: const SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Column(
               children: [
@@ -74,13 +78,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 DiscoverContainer(),
                 BreakfastContainer(),
                 ItemContainer()
-
               ],
             ),
           ),
           bottomNavigationBar: BottomBarInspiredFancy(
             items: items,
-            backgroundColor: Colors.white, //withOpacity(0.21),
+            backgroundColor: Colors.white,
+            //withOpacity(0.21),
             color: Colors.grey,
             colorSelected: Colors.deepOrangeAccent,
             indexSelected: visit,
@@ -100,4 +104,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-

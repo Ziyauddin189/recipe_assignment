@@ -43,15 +43,11 @@ class RoundedGreyContainer extends StatelessWidget {
                 child: Stack(
                   fit: StackFit.expand,
                   children: [
-                    Image.network(imageUrl,
-                        fit: BoxFit.cover
-                    ),
-
-                    Positioned(
-                      right: 10,
-                      bottom: 10,
-                      child: Icon(Icons.favorite_border)
-                    ),
+                    Image.network(imageUrl, fit: BoxFit.cover),
+                    const Positioned(
+                        right: 10,
+                        bottom: 10,
+                        child: Icon(Icons.favorite_border)),
                   ],
                 ),
               ),
@@ -74,10 +70,14 @@ class RoundedGreyContainer extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
                 children: [
-                  Icon(Icons.timer),
-                  SizedBox(width: 10,),
-                  Text('20 minutes'),
-                  SizedBox(width: 30,),
+                  const Icon(Icons.timer),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Text('20 minutes'),
+                  const SizedBox(
+                    width: 30,
+                  ),
                   Container(
                     width: 10,
                     height: 10,
@@ -86,18 +86,18 @@ class RoundedGreyContainer extends StatelessWidget {
                       color: Colors.green,
                     ),
                   ),
-                  SizedBox(width: 10,),
-                  Text('Vegetarian'),
-
-
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Text('Vegetarian'),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 7),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
               child: Row(
                 children: List.generate(5, (index) {
-                  return Icon(
+                  return const Icon(
                     Icons.star,
                     size: 20,
                     color: Colors.grey,
@@ -105,7 +105,6 @@ class RoundedGreyContainer extends StatelessWidget {
                 }),
               ),
             )
-
           ],
         ),
       ),

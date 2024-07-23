@@ -16,21 +16,21 @@ class DealOfDay extends StatelessWidget {
           children: [
             hasRecipes
                 ? Image.network(viewModel.recipes[3].imageUrl)
-                : Center(child: CircularProgressIndicator()),
+                : const Center(child: CircularProgressIndicator()),
             Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: 20),
+                    margin: const EdgeInsets.only(top: 20),
                     height: 40,
                     width: 300,
                     decoration: BoxDecoration(
                       color: Colors.white70,
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 8.0),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Search',
@@ -40,10 +40,10 @@ class DealOfDay extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 150,
                   ),
-                  Text(
+                  const Text(
                     'Dish of the day',
                     style: TextStyle(
                       fontSize: 25.0,
@@ -53,7 +53,7 @@ class DealOfDay extends StatelessWidget {
                   ),
                   Text(
                     hasRecipes ? 'Chicken Biryani' : '',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 12.0,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,

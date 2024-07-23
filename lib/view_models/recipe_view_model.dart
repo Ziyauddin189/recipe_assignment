@@ -8,6 +8,7 @@ class RecipeViewModel extends BaseViewModel {
   String _errorMessage = '';
 
   List<Recipe> get recipes => _recipes;
+
   String get errorMessage => _errorMessage;
 
   Future<void> fetchRecipes() async {

@@ -63,7 +63,9 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: const SizedBox(),
-        title: Center(child: Text('Recipes',
+        title: Center(
+            child: Text(
+          'Recipes',
           style: TextStyle(
             fontSize: 16.0,
             color: Colors.black,
@@ -74,7 +76,8 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
-            child: Icon(Icons.favorite_border,
+            child: Icon(
+              Icons.favorite_border,
               color: Colors.black,
             ),
           )
@@ -119,7 +122,8 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
       ),
       bottomNavigationBar: BottomBarInspiredFancy(
         items: items,
-        backgroundColor: Colors.white, //withOpacity(0.21),
+        backgroundColor: Colors.white,
+        //withOpacity(0.21),
         color: Colors.grey,
         colorSelected: Colors.deepOrangeAccent,
         indexSelected: visit,
