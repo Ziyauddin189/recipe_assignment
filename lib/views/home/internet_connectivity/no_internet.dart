@@ -73,9 +73,9 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
           ),
         )),
         backgroundColor: Colors.white70,
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 20),
+            padding: EdgeInsets.only(right: 20),
             child: Icon(
               Icons.favorite_border,
               color: Colors.black,
@@ -123,7 +123,6 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
       bottomNavigationBar: BottomBarInspiredFancy(
         items: items,
         backgroundColor: Colors.white,
-        //withOpacity(0.21),
         color: Colors.grey,
         colorSelected: Colors.deepOrangeAccent,
         indexSelected: visit,
