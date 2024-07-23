@@ -9,7 +9,7 @@ class ItemContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<RecipeViewModel>.reactive(
-      onModelReady: (viewModel) => viewModel.fetchRecipes(),
+      onViewModelReady: (viewModel) => viewModel.fetchRecipes(),
       viewModelBuilder: () => RecipeViewModel(),
       builder: (context, viewModel, child) {
         return viewModel.isBusy

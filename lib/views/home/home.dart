@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return ViewModelBuilder<RecipeViewModel>.reactive(
       viewModelBuilder: () => RecipeViewModel(),
-      onModelReady: (viewModel) => viewModel.fetchRecipes(),
+      onViewModelReady: (viewModel) => viewModel.fetchRecipes(),
       builder: (context, viewModel, child) {
         return Scaffold(
           appBar: AppBar(
