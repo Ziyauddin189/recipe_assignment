@@ -12,7 +12,9 @@
   "please_check_your_internet": "\"Please check your internet connection.\",",
   "pull_down_to_refresh": "\"Pull down to refresh.\",",
   "minutes": "20 minutes",
-  "vegetarian": "Vegetarian"
+  "vegetarian": "Vegetarian",
+  "added_to_favorites": "Added to favorites",
+  "removed_from_favorites": "Removed from favorites"
 
 
 }

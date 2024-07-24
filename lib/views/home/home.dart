@@ -50,10 +50,10 @@ class _HomeScreenState extends State<HomeScreen> {
         return Scaffold(
           appBar: AppBar(
             leading: const SizedBox(),
-            title: const Center(
+            title: Center(
                 child: Text(
-              'Recipes',
-              style: TextStyle(
+              LanguageTranslation.current.recipes,
+              style: const TextStyle(
                 fontSize: 16.0,
                 color: Colors.black,
                 fontWeight: FontWeight.bold,

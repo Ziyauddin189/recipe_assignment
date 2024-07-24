@@ -189,6 +189,26 @@ class LanguageTranslation {
       args: [],
     );
   }
+
+  /// `Added to favorites`
+  String get added_to_favorites {
+    return Intl.message(
+      'Added to favorites',
+      name: 'added_to_favorites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Removed from favorites`
+  String get removed_from_favorites {
+    return Intl.message(
+      'Removed from favorites',
+      name: 'removed_from_favorites',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate

@@ -61,16 +61,20 @@ class RoundedGreyContainer extends StatelessWidget {
                               if (isFavorite) {
                                 box.delete(index).then((_) {
                                   ScaffoldMessenger.of(currentContext).showSnackBar(
-                                    const SnackBar(
-                                      content: Text('Removed from favorites'),
+                                    SnackBar(
+                                      content: Text(
+                                          LanguageTranslation.current.removed_from_favorites,
+                                      ),
                                     ),
                                   );
                                 });
                               } else {
                                 box.put(index, title).then((_) {
                                   ScaffoldMessenger.of(currentContext).showSnackBar(
-                                    const SnackBar(
-                                      content: Text('Added to favorites'),
+                                    SnackBar(
+                                      content: Text(
+                                        LanguageTranslation.current.added_to_favorites,
+                                      ),
                                     ),
                                   );
                                 });
