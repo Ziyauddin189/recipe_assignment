@@ -8,13 +8,13 @@ import 'package:nosh_assignment/views/splash_screen.dart';
 Future<void> main() async{
   await Hive.initFlutter();
   Hive.openBox('favorites');
-  runApp(MyApp());
+  runApp(const MyApp());
   DependencyInjection.init();
 }
 
-
-
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
