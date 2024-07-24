@@ -2,9 +2,10 @@
 
 Recipe App made using Flutter version 3.13.0
 
-![1000278442](https://github.com/user-attachments/assets/c54bc48d-4cfb-4015-b7e7-dc183467a22d)
-![1000278443](https://github.com/user-attachments/assets/9110bc12-890d-4d36-9e6a-3266da14a58f)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c54bc48d-4cfb-4015-b7e7-dc183467a22d" height="200" width="200" />
+  <img src="https://github.com/user-attachments/assets/9110bc12-890d-4d36-9e6a-3266da14a58f" height="200" width="200" />
+</p>
 
 
 ## Getting Started
