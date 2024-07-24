@@ -35,26 +35,24 @@ class NoInternetScreen extends StatefulWidget {
 }
 
 class _NoInternetScreenState extends State<NoInternetScreen> {
-  bool _isRefreshing = false;
   int visit = 0;
 
   Future<void> _checkInternetAndNavigate() async {
     final result = await Connectivity().checkConnectivity();
+    if (!mounted) return;
     if (result != ConnectivityResult.none) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
       );
     }
   }
 
   Future<void> _handleRefresh() async {
     setState(() {
-      _isRefreshing = true;
     });
     await _checkInternetAndNavigate();
     setState(() {
-      _isRefreshing = false;
     });
   }
 
@@ -129,12 +127,8 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
         styleIconFooter: StyleIconFooter.dot,
         onTap: (int index) => setState(() {
           visit = index;
-          if (index == 1) {
-            //
-          }
-          if (index == 2) {
-            //
-          }
+          if (index == 1) {}
+          if (index == 2) {}
         }),
       ),
     );

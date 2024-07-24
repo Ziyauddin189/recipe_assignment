@@ -9,7 +9,8 @@ class RoundedGreyContainer extends StatelessWidget {
   final VoidCallback onButtonPressed;
   final int index;
 
-  const RoundedGreyContainer({super.key,
+  const RoundedGreyContainer({
+    super.key,
     required this.imageUrl,
     required this.title,
     required this.buttonText,
@@ -42,8 +43,7 @@ class RoundedGreyContainer extends StatelessWidget {
               valueListenable: Hive.box('favorites').listenable(),
               builder: (context, Box box, child) {
                 bool isFavorite = box.get(index) != null;
-
-                return Container(
+                return SizedBox(
                   height: 180,
                   width: double.infinity,
                   child: ClipRRect(
@@ -56,21 +56,24 @@ class RoundedGreyContainer extends StatelessWidget {
                           right: 10,
                           bottom: 10,
                           child: GestureDetector(
-                            onTap: () async {
+                            onTap: () {
+                              final currentContext = context;
                               if (isFavorite) {
-                                await box.delete(index);
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text('Removed from favorites'),
-                                  ),
-                                );
+                                box.delete(index).then((_) {
+                                  ScaffoldMessenger.of(currentContext).showSnackBar(
+                                    const SnackBar(
+                                      content: Text('Removed from favorites'),
+                                    ),
+                                  );
+                                });
                               } else {
-                                await box.put(index, title); // Assuming you want to store the title
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text('Added to favorites'),
-                                  ),
-                                );
+                                box.put(index, title).then((_) {
+                                  ScaffoldMessenger.of(currentContext).showSnackBar(
+                                    const SnackBar(
+                                      content: Text('Added to favorites'),
+                                    ),
+                                  );
+                                });
                               }
                             },
                             child: Icon(

@@ -1,13 +1,10 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:nosh_assignment/views/home/internet_connectivity/no_internet.dart';
-
-import 'home/home.dart';
+import 'package:nosh_assignment/views/home/home.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({
-    super.key,
-  });
+  const SplashScreen({super.key});
 
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -22,15 +19,16 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> _checkInternetAndNavigate() async {
     final result = await Connectivity().checkConnectivity();
+    if (!mounted) return;
     if (result == ConnectivityResult.none) {
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => NoInternetScreen()),
+        MaterialPageRoute(builder: (context) => const NoInternetScreen()),
       );
     } else {
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
       );
     }
   }

@@ -6,7 +6,6 @@ import 'package:nosh_assignment/views/home/components/breakfast_container.dart';
 import 'package:nosh_assignment/views/home/components/discover_container.dart';
 import 'package:nosh_assignment/views/home/components/dish_of_day.dart';
 import 'package:nosh_assignment/views/home/components/item_container.dart';
-import 'package:nosh_assignment/widgets/rounded_grey_container.dart';
 import 'package:stacked/stacked.dart';
 
 List<TabItem> items = [
@@ -85,19 +84,14 @@ class _HomeScreenState extends State<HomeScreen> {
           bottomNavigationBar: BottomBarInspiredFancy(
             items: items,
             backgroundColor: Colors.white,
-            //withOpacity(0.21),
             color: Colors.grey,
             colorSelected: Colors.deepOrangeAccent,
             indexSelected: visit,
             styleIconFooter: StyleIconFooter.dot,
             onTap: (int index) => setState(() {
               visit = index;
-              if (index == 1) {
-                //
-              }
-              if (index == 2) {
-                //
-              }
+              if (index == 1) {}
+              if (index == 2) {}
             }),
           ),
         );
