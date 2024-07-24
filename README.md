@@ -17,6 +17,14 @@ Recipe App made using Flutter version 3.13.0
 - Add to favorites using Hive database
 - Responsive UI
 
+## Running the App
+
+### Android
+To run the app on an Android device or emulator, use the following command:
+
+```sh
+flutter run
+
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
